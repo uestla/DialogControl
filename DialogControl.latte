@@ -4,9 +4,9 @@
 		<div id="mdl-dialog">
 			<p class="msg">{$message}</p>
 
-			{form $form, class => 'ajax'}
+			{form $form, class => ajax}
 				{control $form errors}
-				{input delete, class => 'default'} {input cancel, autofocus => TRUE}
+				{input delete, class => default} {input cancel, autofocus => TRUE}
 			{/form}
 		</div>
 	</div>
