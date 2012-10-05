@@ -1,5 +1,7 @@
 <?php
 
+namespace Components;
+
 use Nette\Application\UI;
 
 
