@@ -7,11 +7,8 @@ use Components;
 
 class DialogControlFactory extends BaseControlFactory
 {
-	/**
-	 * @param  string
-	 * @return Components\DialogControl
-	 */
-	function create($appID)
+	/** @return Components\DialogControl */
+	function create()
 	{
 		$c = new Components\DialogControl;
 		$this->onCreate( $c );
