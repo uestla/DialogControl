@@ -1,6 +1,16 @@
 <?php
 
-namespace Components;
+/**
+ * This file is part of the DialogControl package
+ *
+ * Copyright (c) 2013 Petr Kessler (http://kesspess.1991.cz)
+ *
+ * @license  MIT
+ * @link     https://github.com/uestla/DialogControl
+ */
+
+
+namespace Components\Controls;
 
 use Nette\Application\UI;
 
@@ -15,6 +25,11 @@ class DialogControl extends BaseControl
 
 
 
+	/**
+	 * @param  string
+	 * @param  UI\Form
+	 * @return DialogControl
+	 */
 	function setup($message, UI\Form $form)
 	{
 		$this->message = $message;
@@ -26,6 +41,7 @@ class DialogControl extends BaseControl
 
 
 
+	/** @return DialogControl */
 	function reset()
 	{
 		$this->message = $this->form = NULL;
@@ -36,6 +52,7 @@ class DialogControl extends BaseControl
 
 
 
+	/** @return void */
 	function render()
 	{
 		if ($this->message !== NULL && $this->form !== NULL) {

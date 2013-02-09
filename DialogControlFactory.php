@@ -1,17 +1,41 @@
 <?php
 
-namespace Model\Factories;
+/**
+ * This file is part of the DialogControl package
+ *
+ * Copyright (c) 2013 Petr Kessler (http://kesspess.1991.cz)
+ *
+ * @license  MIT
+ * @link     https://github.com/uestla/DialogControl
+ */
 
-use Components;
+
+namespace Components\Factories;
+
+use Nette;
+use Components\Controls;
 
 
-class DialogControlFactory extends BaseControlFactory
+class DialogControlFactory extends Nette\Object implements IDialogControlFactory
 {
-	/** @return Components\DialogControl */
-	function create()
+
+	/** @var Nette\DI\IContainer */
+	protected $container;
+
+
+
+	/** @param  Nette\DI\IContainer */
+	function __construct(Nette\DI\IContainer $container)
 	{
-		$c = new Components\DialogControl;
-		$this->onCreate( $c );
-		return $c;
+		$this->container = $container;
 	}
+
+
+
+	/** @return Controls\DialogControl */
+	function createControl()
+	{
+		return $this->container->createDialogControl();
+	}
+
 }
