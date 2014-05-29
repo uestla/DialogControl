@@ -9,7 +9,6 @@
  * @link     https://github.com/uestla/DialogControl
  */
 
-
 namespace Components\Factories;
 
 use Components\Controls;

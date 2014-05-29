@@ -9,7 +9,6 @@
  * @link     https://github.com/uestla/DialogControl
  */
 
-
 namespace Components\Controls;
 
 use Nette\Application\UI;
@@ -17,12 +16,12 @@ use Nette\Application\UI;
 
 class DialogControl extends BaseControl
 {
+
 	/** @var string */
 	protected $message = NULL;
 
 	/** @var UI\Form */
 	protected $form = NULL;
-
 
 
 	/**
@@ -40,7 +39,6 @@ class DialogControl extends BaseControl
 	}
 
 
-
 	/** @return DialogControl */
 	function reset()
 	{
@@ -49,7 +47,6 @@ class DialogControl extends BaseControl
 
 		return $this;
 	}
-
 
 
 	/** @return void */
@@ -62,4 +59,5 @@ class DialogControl extends BaseControl
 
 		$this->template->render();
 	}
+
 }
